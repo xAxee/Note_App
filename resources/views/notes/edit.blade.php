@@ -36,6 +36,7 @@
                 </div>
                 <div class="card-footer bg-dark">
                     <a href="{{ route('notes') }}"><div class="btn btn-info"><i class="fas fa-clipboard"></i> Lista</div></a>
+                    <a href="{{ route('notes.details', $Note->id) }}"><div class="btn btn-danger"><i class="far fa-eye"></i></div></a>
                     <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Zapisz</button>
                 </div>
             </div>
