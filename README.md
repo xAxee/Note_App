@@ -1,7 +1,11 @@
 
 # Notatki
 
-Projekt do zarzadzania notatkami
+Prosty projekt w laravel do do zarzadzania notatkami
+z widokami oraz api.
+
+Stworzony jako projekt do szkoły.
+
 ## Views
 ```
 List    | /notes

@@ -12,7 +12,7 @@
                 <th scope="col">Tytuł</th>
                 <th scope="col">Data utworzenia</th>
                 <th scope="col">Data edycji</th>
-                <th scope="col">Działania</th>
+                <th scope="col">Operacje</th>
               </tr>
             </thead>
             <tbody>
