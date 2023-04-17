@@ -2,6 +2,13 @@
 
 @section('content')
     <div class="container">
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+            <div class="alert alert-danger">
+                <p>{{ $error }}</p>
+            </div>
+            @endforeach
+        @endif
         <form action="{{ route('notes.post.edit', $Note->id) }}" method="post" class="needs-validation" novalidate>
           @method("PUT")
             {{ csrf_field() }}
