@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Note;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Pagination\Paginator;
 
 
 class NotesController extends Controller
@@ -14,10 +15,9 @@ class NotesController extends Controller
     }
 
     public function List(){
-        $notes = Note::all()->sort(function($a, $b){
-            return ($a->created_at > $b->created_at) ? -1 : 1;
-        });
-        return View("notes.list", ["notes" => $notes]);
+        return View("notes.list", [
+            'notes' => Note::orderBy('updated_at', 'desc')->paginate(10)
+        ]);
     }
 
     public function Create(){

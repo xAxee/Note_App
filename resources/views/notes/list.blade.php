@@ -41,6 +41,7 @@
             </tbody>
           </table>
           <a href="{{ route('notes.create') }}"><div class="btn btn-success"><i class="fas fa-plus"></i> Dodaj notatke</div></a>
+          {{ $notes->render("pagination::bootstrap-4") }}
     </div>
 </div>
 @endsection
