@@ -25,8 +25,12 @@ class ApiController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'Author' => ['required', 'max:30'],
+            'Title' => ['required', 'max:30'],
+            'Content' => ['required', 'max:1000'],
+        ]);
         $data = $request->all();
-
 
         $note = new Note();
         $note->Author = $data["Author"];
@@ -57,6 +61,11 @@ class ApiController extends Controller
      */
     public function update(Request $request, int $id)
     {
+        $request->validate([
+            'Author' => ['required', 'max:30'],
+            'Title' => ['required', 'max:30'],
+            'Content' => ['required', 'max:1000'],
+        ]);
         $data = $request->all();
         $note = Note::find($id);
         $note->Author = $data["Author"];
