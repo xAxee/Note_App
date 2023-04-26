@@ -2,7 +2,7 @@
 
 @if(count($notes) > 0)
 @section('content')
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
         <h3>Lista notatek
         @if(isset($author))
             <b>{{ $author }}</b>
@@ -44,11 +44,11 @@
                 @endforeach
             </tbody>
           </table>
+          {{ $notes->render("pagination::bootstrap-4") }}
           <a href="{{ route('notes.create') }}"><div class="btn btn-success"><i class="fas fa-plus"></i> Dodaj notatke</div></a>
           @if(isset($author))
-            <a href="{{ route('notes') }}"><div class="btn btn-primary"><i class="fas fa-clipboard"></i> Wróć</div></a>
+            <a href="{{ route('notes') }}"><div class="btn btn-primary mb-5"><i class="fas fa-clipboard"></i> Wróć</div></a>
           @endif
-          {{ $notes->render("pagination::bootstrap-4") }}
     </div>
 </div>
 @endsection
@@ -56,7 +56,7 @@
 @else
 
 @section('content')
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
       <h1>Brak notatek do wyswietlenia</h1>
       <a href="{{ route('notes.create') }}"><div class="btn btn-success"><i class="fas fa-plus"></i> Dodaj notatke</div></a>
     </div>
