@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [NotesController::class, "Index"])->name("Index");
 
 Route::get('/notes', [NotesController::class, 'List'])->name('notes');
+Route::get('/notes/author/{author}', [NotesController::class, 'AuthorList'])->name('notes.author');
 
 Route::get('/notes/create', [NotesController::class, 'Create'])->name('notes.create');
 Route::get('/notes/details/{id}', [NotesController::class, 'Details'])->name('notes.details');

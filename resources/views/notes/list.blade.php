@@ -3,7 +3,11 @@
 @if(count($notes) > 0)
 @section('content')
     <div class="container mt-5">
-        <h3>Lista notatek</h3>
+        <h3>Lista notatek
+        @if(isset($author))
+            <b>{{ $author }}</b>
+        @endif
+        </h3>
         <table class="table table-dark table-bordered table-hover table-striped ">
             <thead>
               <tr>
@@ -20,7 +24,7 @@
                 @foreach($notes as $note)
                     <tr>
                         <td>{{ $lp }}</td>
-                        <td>{{ $note->Author }}</td>
+                        <td><a href="{{ route('notes.author', $note->Author) }}" class="text-white font-weight-bold">{{ $note->Author }}</a></td>
                         <td>{{ $note->Title }}</td>
                         <td>{{ $note->created_at }}
                         <td>
@@ -41,6 +45,9 @@
             </tbody>
           </table>
           <a href="{{ route('notes.create') }}"><div class="btn btn-success"><i class="fas fa-plus"></i> Dodaj notatke</div></a>
+          @if(isset($author))
+            <a href="{{ route('notes') }}"><div class="btn btn-primary"><i class="fas fa-clipboard"></i> Wróć</div></a>
+          @endif
           {{ $notes->render("pagination::bootstrap-4") }}
     </div>
 </div>

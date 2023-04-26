@@ -11,13 +11,19 @@ use Illuminate\Pagination\Paginator;
 class NotesController extends Controller
 {
     public function Index(){
-        return View("Welcome");
+        $count = Note::count(); 
+        return View("Welcome", ['count' => $count]);
     }
 
     public function List(){
         return View("notes.list", [
             'notes' => Note::orderBy('updated_at', 'desc')->paginate(10)
         ]);
+    }
+    public function AuthorList(string $author){
+        return View("notes.list", [
+            'notes' => Note::orderBy('updated_at', 'desc')->where('Author', "=", $author)->paginate(10)
+        ], ['author' => $author]);
     }
 
     public function Create(){
