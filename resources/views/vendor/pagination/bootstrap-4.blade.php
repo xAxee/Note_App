@@ -56,5 +56,9 @@
             background: #32383e !important;
             color: white !important;
         }
+        a.page-link:hover{
+            background: #32383e !important;
+            color: white;
+        }
     </style>
 @endif

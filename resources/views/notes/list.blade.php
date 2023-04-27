@@ -44,10 +44,12 @@
                 @endforeach
             </tbody>
           </table>
-          {{ $notes->render("pagination::bootstrap-4") }}
-          <a href="{{ route('notes.create') }}"><div class="btn btn-success"><i class="fas fa-plus"></i> Dodaj notatke</div></a>
+          {{ $notes->onEachSide(0)->render("pagination::bootstrap-4") }}
+          <a href="{{ route('notes.create', $note->Author) }}"><div class="btn btn-success"><i class="fas fa-plus"></i> Dodaj notatke</div></a>
           @if(isset($author))
-            <a href="{{ route('notes') }}"><div class="btn btn-primary mb-5"><i class="fas fa-clipboard"></i> Wróć</div></a>
+            <div class="m-1">
+                <a href="{{ route('notes') }}"><div class="btn btn-primary mb-5"><i class="fas fa-clipboard"></i> Wróć</div></a>
+            </div>
           @endif
     </div>
 </div>

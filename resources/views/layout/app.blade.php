@@ -13,9 +13,9 @@
 </head>
     <body class="text-center">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-dark">
-            <a class="navbar-brand" href="{{ route('notes') }}">Notatki</a>
+            <a class="navbar-brand" href="{{ route('Index') }}">Notatki</a>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Strona główna</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('notes') }}">Lista notatek</a></li>
             </ul>
         </nav>
         <div class="container">
