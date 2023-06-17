@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::apiResource('notes', ApiController::class);
+//Route::apiResource('note', ApiController::class);
+
+Route::get('note', [ApiController::class, 'index'])
+Route::get('note/{id}', [ApiController::class, 'show'])
+Route::post('note', [ApiController::class, 'store'])
+Route::put('note', [ApiController::class, 'update'])
+Route::delete('note', [ApiController::class, 'delete'])
