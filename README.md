@@ -2,7 +2,7 @@
 # Notatki by xAxee
 
 Prosty projekt w laravel do do zarzadzania notatkami z widokami oraz api.<br>
-Stworzony jako projekt do szkoły oraz w celu rozpoczęcia nauki nad frameworkiem laravel
+Stworzony jako projekt do szkoły oraz w celu rozpoczęcia nauki nad frameworkiem laravel.
 ## Pobieranie
  - Stworz nowy projekt laravel ```composer create-project --prefer-dist laravel/laravel Note_App```
  - Pobierz repozytorium i wypakuj do projektu
