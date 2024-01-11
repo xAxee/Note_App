@@ -23,7 +23,7 @@
                         <li class="list-group-item bg-dark"><b>Data utworzenia: </b><br>{{ $Note->created_at }}</li>
                         <li class="list-group-item bg-dark"><b>Edytowane:</b>
                             @if($Note->updated_at != $Note->created_at)
-                            Tak <br>{{ $Note->updated_at }}
+                                Tak <br>{{ $Note->updated_at }}
                             @else
                                 Nie
                             @endif
