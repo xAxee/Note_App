@@ -1,5 +1,5 @@
 
-# Notatki by xAxee
+# System notatek
 
 Prosty projekt w laravel do do zarzadzania notatkami z widokami oraz api.<br>
 Stworzony jako projekt do szkoły oraz w celu rozpoczęcia nauki nad frameworkiem laravel.
